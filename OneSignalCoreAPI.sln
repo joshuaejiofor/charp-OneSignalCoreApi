@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zeus.OneSignalCoreAPI", "Zeus.OneSignalCoreAPI\Zeus.OneSignalCoreAPI.csproj", "{FF2086C3-045A-450D-9C6E-8126BAE39F4C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D462B6C8-B256-40A8-AE4A-21AC5B2C7910}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{7B3989A6-C834-45ED-BDCF-3D5BC429E8CE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D3800F55-CD15-456A-8376-FBA9793A2FEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zeus.Core", "Zeus.Core\Zeus.Core.csproj", "{704F75E4-12CC-4D0E-96F9-E265438819A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zeus.EntityFrameworkCore", "Zeus.EntityFrameworkCore\Zeus.EntityFrameworkCore.csproj", "{FD6DD356-E2C5-423F-8F65-4B35303770D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zeus.Application", "Zeus.Application\Zeus.Application.csproj", "{B9416AB1-550D-4BEB-B18E-0349CB01CF76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zeus.OneSignalCoreAPI.Tests", "Zeus.OneSignalCoreAPI.Tests\Zeus.OneSignalCoreAPI.Tests.csproj", "{CB8C5919-E017-43EE-8712-FC70FE144C9B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF2086C3-045A-450D-9C6E-8126BAE39F4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF2086C3-045A-450D-9C6E-8126BAE39F4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF2086C3-045A-450D-9C6E-8126BAE39F4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF2086C3-045A-450D-9C6E-8126BAE39F4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{704F75E4-12CC-4D0E-96F9-E265438819A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{704F75E4-12CC-4D0E-96F9-E265438819A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{704F75E4-12CC-4D0E-96F9-E265438819A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{704F75E4-12CC-4D0E-96F9-E265438819A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD6DD356-E2C5-423F-8F65-4B35303770D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD6DD356-E2C5-423F-8F65-4B35303770D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD6DD356-E2C5-423F-8F65-4B35303770D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD6DD356-E2C5-423F-8F65-4B35303770D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9416AB1-550D-4BEB-B18E-0349CB01CF76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9416AB1-550D-4BEB-B18E-0349CB01CF76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9416AB1-550D-4BEB-B18E-0349CB01CF76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9416AB1-550D-4BEB-B18E-0349CB01CF76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB8C5919-E017-43EE-8712-FC70FE144C9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB8C5919-E017-43EE-8712-FC70FE144C9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB8C5919-E017-43EE-8712-FC70FE144C9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB8C5919-E017-43EE-8712-FC70FE144C9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FF2086C3-045A-450D-9C6E-8126BAE39F4C} = {D462B6C8-B256-40A8-AE4A-21AC5B2C7910}
+		{7B3989A6-C834-45ED-BDCF-3D5BC429E8CE} = {D462B6C8-B256-40A8-AE4A-21AC5B2C7910}
+		{704F75E4-12CC-4D0E-96F9-E265438819A0} = {7B3989A6-C834-45ED-BDCF-3D5BC429E8CE}
+		{FD6DD356-E2C5-423F-8F65-4B35303770D4} = {7B3989A6-C834-45ED-BDCF-3D5BC429E8CE}
+		{B9416AB1-550D-4BEB-B18E-0349CB01CF76} = {D462B6C8-B256-40A8-AE4A-21AC5B2C7910}
+		{CB8C5919-E017-43EE-8712-FC70FE144C9B} = {D3800F55-CD15-456A-8376-FBA9793A2FEE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61AD2165-3D8B-47B0-BBF2-814BD6533550}
+	EndGlobalSection
+EndGlobal

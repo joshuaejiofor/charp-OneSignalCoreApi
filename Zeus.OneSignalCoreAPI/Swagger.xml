@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Zeus.OneSignalCoreAPI</name>
+    </assembly>
+    <members>
+        <member name="M:Zeus.OneSignalCoreAPI.Controllers.TokenController.Get(System.Guid)">
+            <summary>
+            Get token by customer id (No auth)
+            </summary>
+        </member>
+    </members>
+</doc>
