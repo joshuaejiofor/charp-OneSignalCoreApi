@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "31780361-ba5f-4fe3-93ef-b9be1d6d43a1",
+		"name": "OneSignalCore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Token",
+			"item": [
+				{
+					"name": "Get Token",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44334/api/v1/token/92911750-242d-4260-9e00-9d9034f139ce",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44334",
+							"path": [
+								"api",
+								"v1",
+								"token",
+								"92911750-242d-4260-9e00-9d9034f139ce"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "App",
+			"item": [
+				{
+					"name": "Fetch All App",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44334/api/v1/app",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44334",
+							"path": [
+								"api",
+								"v1",
+								"app"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch App By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44334/api/v1/app/92911750-242d-4260-9e00-9d9034f139ce",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44334",
+							"path": [
+								"api",
+								"v1",
+								"app",
+								"92911750-242d-4260-9e00-9d9034f139ce"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete App",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44334/api/v1/app/e4e87830-b954-11e3-811d-f3b376925f15",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44334",
+							"path": [
+								"api",
+								"v1",
+								"app",
+								"e4e87830-b954-11e3-811d-f3b376925f15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create App",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\": \"92911750-242d-4260-9e00-9d9034f139ff\",\r\n    \"Name\": \"Your app 10\",\r\n    \"Players\": 150,\r\n    \"Messageable_players\": 143,\r\n    \"Updated_at\": \"2014-04-08\",\r\n    \"Created_at\": \"2014-04-01\",\r\n    \"Gcm_key\": \"a gcm push key\",\r\n    \"Chrome_key\": \"A Chrome Web Push GCM key\",\r\n    \"Chrome_web_origin\": \"Chrome Web Push Site URL\",\r\n    \"Chrome_web_gcm_sender_id\": \"Chrome Web Push GCM Sender ID\",\r\n    \"Chrome_web_default_notification_icon\": \"http://yoursite.com/chrome_notification_icon\",\r\n    \"Chrome_web_sub_domain\":\"your_site_name\",\r\n    \"Apns_env\": \"sandbox\",\r\n    \"Apns_certificates\": \"Your apns certificate\",\r\n    \"Safari_apns_certificate\": \"Your Safari APNS certificate\",\r\n    \"Safari_site_origin\": \"The homename for your website for Safari Push, including http or https\",\r\n    \"Safari_push_id\": \"The certificate bundle ID for Safari Web Push\",\r\n    \"Safari_icon_16_16\": \"http://onesignal.com/safari_packages/92911750-242d-4260-9e00-9d9034f139ce/16x16.png\",\r\n    \"Safari_icon_32_32\": \"http://onesignal.com/safari_packages/92911750-242d-4260-9e00-9d9034f139ce/16x16@2.png\",\r\n    \"Safari_icon_64_64\": \"http://onesignal.com/safari_packages/92911750-242d-4260-9e00-9d9034f139ce/32x32@2x.png\",\r\n    \"Safari_icon_128_128\": \"http://onesignal.com/safari_packages/92911750-242d-4260-9e00-9d9034f139ce/128x128.png\",\r\n    \"Safari_icon_256_256\": \"http://onesignal.com/safari_packages/92911750-242d-4260-9e00-9d9034f139ce/128x128@2x.png\",\r\n    \"Site_name\": \"The URL to your website for Web Push\",  \r\n    \"Basic_auth_key\": \"\",\r\n    \"IsActive\": true\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44334/api/v1/app",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44334",
+							"path": [
+								"api",
+								"v1",
+								"app"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update App",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\": \"92911750-242d-4260-9e00-9d9034f139ff\",\r\n    \"Name\": \"Update Your app 10\",\r\n    \"Players\": 150,\r\n    \"Messageable_players\": 143,\r\n    \"Updated_at\": \"2014-04-08\",\r\n    \"Created_at\": \"2014-04-01\",\r\n    \"Gcm_key\": \"Update a gcm push key\",\r\n    \"Chrome_key\": \"Update A Chrome Web Push GCM key\",\r\n    \"Chrome_web_origin\": \"Update Chrome Web Push Site URL\",\r\n    \"Chrome_web_gcm_sender_id\": \"Update Chrome Web Push GCM Sender ID\",\r\n    \"Chrome_web_default_notification_icon\": \"http://yoursite.com/chrome_notification_icon\",\r\n    \"Chrome_web_sub_domain\":\"Update your_site_name\",\r\n    \"Apns_env\": \"sandbox\",\r\n    \"Apns_certificates\": \"Update Your apns certificate\",\r\n    \"Safari_apns_certificate\": \"Update Your Safari APNS certificate\",\r\n    \"Safari_site_origin\": \"Update The homename for your website for Safari Push, including http or https\",\r\n    \"Safari_push_id\": \"Update The certificate bundle ID for Safari Web Push\",\r\n    \"Safari_icon_16_16\": \"http://onesignal.com/safari_packages/92911750-242d-4260-9e00-9d9034f139ce/16x16.png\",\r\n    \"Safari_icon_32_32\": \"http://onesignal.com/safari_packages/92911750-242d-4260-9e00-9d9034f139ce/16x16@2.png\",\r\n    \"Safari_icon_64_64\": \"http://onesignal.com/safari_packages/92911750-242d-4260-9e00-9d9034f139ce/32x32@2x.png\",\r\n    \"Safari_icon_128_128\": \"http://onesignal.com/safari_packages/92911750-242d-4260-9e00-9d9034f139ce/128x128.png\",\r\n    \"Safari_icon_256_256\": \"http://onesignal.com/safari_packages/92911750-242d-4260-9e00-9d9034f139ce/128x128@2x.png\",\r\n    \"Site_name\": \"Update The URL to your website for Web Push\", \r\n    \"IsActive\": true\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44334/api/v1/app",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44334",
+							"path": [
+								"api",
+								"v1",
+								"app"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJPbmVTaWduYWxBcGktQWNjZXNzVG9rZW4iLCJqdGkiOiJmOTAyZTdkYi1iMGU4LTRmYTItOGYwNC1jYWM2OTFmOTVmYmYiLCJpYXQiOiIxMC8xOC8yMDIwIDg6MTc6MjUgUE0iLCJJZCI6IjkyOTExNzUwLTI0MmQtNDI2MC05ZTAwLTlkOTAzNGYxMzljZSIsIkFwcE5hbWUiOiJZb3VyIGFwcCAxIiwiZXhwIjoxNzYwODE4NjQ1LCJpc3MiOiJPbmVTaWduYWxBcGkiLCJhdWQiOiJPbmVTaWduYWxBcGkifQ.v0_GfBIJx71im64PLx56yIjtNcbxEyCA4a2_Ns9eyJg",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "b928c7e3-2318-41c5-90e5-79a359b70b16",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "a513581a-1362-440a-9549-8769e47f32cb",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

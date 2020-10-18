@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Zeus.Core.Models;
+using Zeus.OneSignalCoreAPI.Dto.Apps;
 
 namespace Zeus.OneSignalCoreAPI.Dto.Mappers
 {
@@ -7,9 +8,9 @@ namespace Zeus.OneSignalCoreAPI.Dto.Mappers
     {
         public AppMap()
         {
-            CreateMap<App, AppMap>();
+            CreateMap<App, AppDto>();
 
-            CreateMap<AppMap, App>();
+            CreateMap<AppDto, App>();
         }
     }
 }

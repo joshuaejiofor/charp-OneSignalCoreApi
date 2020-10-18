@@ -5,8 +5,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
-using Zeus.Core.Helpers.Interface;
-using Zeus.Core.Repositories;
 using Zeus.Core.Responses;
 using Zeus.Core.UnitOfWork;
 using Zeus.OneSignalCoreAPI.Dto.Apps;
@@ -19,21 +17,18 @@ namespace Zeus.OneSignalCoreAPI.Controllers
     public class TokenController : ControllerBase
     {
         private readonly ILogger _logger;
-        //private readonly IInputValidator _inputValidator;
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
         private readonly IMemoryCache _memoryCache;
         private readonly IAppService _appService;
 
         public TokenController(ILogger<TokenController> logger,
-                                    //IInputValidator inputValidator,
                                     IUnitOfWork unitOfWork,
                                     IMapper mapper,
                                     IAppService appService,
                                     IMemoryCache memoryCache)
         {
             _logger = logger;
-            //_inputValidator = inputValidator;
             _unitOfWork = unitOfWork;
             _mapper = mapper;
             _appService = appService;
@@ -41,29 +36,21 @@ namespace Zeus.OneSignalCoreAPI.Controllers
         }
 
         /// <summary>
-        /// Get token by customer id (No auth)
+        /// Get token by appId (No auth)
         /// </summary>
-        // GET api/v1/<TokenController>/5
+        // GET api/v1/<TokenController>/92911750-242d-4260-9e00-9d9034f139ce
         [HttpGet("{appId}")]
         [ProducesResponseType(statusCode: StatusCodes.Status200OK, Type = typeof(Response<string>))]
         [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(Response<string>))]
-        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(Response<string>))]
         [ProducesResponseType(StatusCodes.Status500InternalServerError, Type = typeof(Response<string>))]
         public async Task<IActionResult> Get(Guid appId)
         {
             try
             {
-                //if (!_inputValidator.IsValid(customerId))
-                //{
-                //    var error = $"Get: Invalid appId '{appId}' received, returning 400";
-                //    _logger.LogWarning(error);
-                //    return BadRequest(new Response<string>("", error, 400));
-                //}
-
                 var cacheKey = appId;
                 if (!_memoryCache.TryGetValue(cacheKey, out string token))
                 {
-                    var app = await _unitOfWork.AppsRepository.GetAsync(appId);
+                    var app = await _unitOfWork.AppsRepository.SingleOrDefaultAsync(c => c.Id == appId);
                     if (app == null)
                     {
                         var error = $"App with ID {appId} not found, returning 404";
