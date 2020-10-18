@@ -4,9 +4,40 @@
         <name>Zeus.OneSignalCoreAPI</name>
     </assembly>
     <members>
+        <member name="M:Zeus.OneSignalCoreAPI.Controllers.AppController.Get(Zeus.Core.Requests.PaginationFilter)">
+            <summary>
+            Get all apps - with pagination (Auth token required)
+            </summary>
+        </member>
+        <member name="M:Zeus.OneSignalCoreAPI.Controllers.AppController.Get(System.Guid)">
+            <summary>
+            Get app detail by id (Auth token required)
+            </summary>
+            <remarks>
+            Get the App details with Id
+            </remarks> 
+            <param name="appId">This id is unique/primary key of app </param> 
+            <returns object="">App details with id </returns>
+            <response code="200"></response>
+        </member>
+        <member name="M:Zeus.OneSignalCoreAPI.Controllers.AppController.Post(Zeus.OneSignalCoreAPI.Dto.Apps.AppDto)">
+            <summary>
+            Create new app(Auth token required)
+            </summary>
+        </member>
+        <member name="M:Zeus.OneSignalCoreAPI.Controllers.AppController.Put(Zeus.OneSignalCoreAPI.Dto.Apps.AppDto)">
+            <summary>
+            Update existing app (Auth token required)
+            </summary>
+        </member>
+        <member name="M:Zeus.OneSignalCoreAPI.Controllers.AppController.Delete(System.Guid)">
+            <summary>
+            Logical delete - Removes app by id (Auth token required)
+            </summary>
+        </member>
         <member name="M:Zeus.OneSignalCoreAPI.Controllers.TokenController.Get(System.Guid)">
             <summary>
-            Get token by customer id (No auth)
+            Get token by appId (No auth)
             </summary>
         </member>
     </members>

@@ -44,7 +44,7 @@ namespace Zeus.OneSignalCoreAPI.Services
                                                                                         c.Messageable_players == app.Messageable_players);
             if (item != null) throw new DuplicateException();
 
-            app.Basic_auth_key = GenerateJwt(new AppDto { Id = app.Id, Name = app.Name, Created_at = DateTime.Now });
+            app.Basic_auth_key = GenerateJwt(new AppDto { Id = app.Id, Name = app.Name});
             await _unitOfWork.AppsRepository.AddAsync(app);
             await _unitOfWork.CompleteAsync();
 
@@ -85,12 +85,12 @@ namespace Zeus.OneSignalCoreAPI.Services
 
         public async Task<App> GetAppByIdAsync(Guid appId)
         {
-            return await _unitOfWork.AppsRepository.GetAsync(appId);
+            return await _unitOfWork.AppsRepository.SingleOrDefaultAsync(c => c.Id == appId);
         }
 
         public async Task<App> RemoveAppByIdAsync(Guid appId)
         {
-            var app = await _unitOfWork.AppsRepository.GetAsync(appId);
+            var app = await _unitOfWork.AppsRepository.SingleOrDefaultAsync(c => c.Id == appId);
             if (app == null) throw new NullReferenceException();
             if (!app.IsActive) throw new AlreadyDeletedException(); //this fails fast and prevents checking database.
 
@@ -102,7 +102,7 @@ namespace Zeus.OneSignalCoreAPI.Services
 
         public async Task<App> UpdateAppAsync(AppDto appDto)
         {
-            var app = await _unitOfWork.AppsRepository.SingleOrDefaultAsync(c => c.Id == appDto.Id);
+            var app = await _unitOfWork.AppsRepository.SingleOrDefaultAsync(c => c.Id == appDto.Id && c.IsActive);
             if (app == null) throw new NullReferenceException();
 
             app.Id = appDto.Id;

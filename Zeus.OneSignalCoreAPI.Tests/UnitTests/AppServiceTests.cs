@@ -37,7 +37,7 @@ namespace Zeus.OneSignalCoreAPI.Tests.UnitTests
             var logger = new Mock<ILogger<AppService>>();
 
             unitOfWork.Setup(c => c.AppsRepository.GetAll()).Returns(_apps.GetQueryableMockDbSet());
-            unitOfWork.Setup(c => c.AppsRepository.GetAsync(It.IsAny<Guid>())).Returns(Task.FromResult(_app));
+            //unitOfWork.Setup(c => c.AppsRepository.FindAsync(It.IsAny<Expression<Func<App, bool>>>())).Returns(Task.FromResult(_app));
             unitOfWork.Setup(c => c.AppsRepository.FirstOrDefaultAsync(It.IsAny<Expression<Func<App, bool>>>())).Returns(Task.FromResult<App>(null));
             unitOfWork.Setup(c => c.AppsRepository.SingleOrDefaultAsync(It.IsAny<Expression<Func<App, bool>>>())).Returns(Task.FromResult(_app));
 
